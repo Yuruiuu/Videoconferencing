@@ -108,11 +108,23 @@
     <QtMoc Include="CLoginDlg.h" />
     <ClCompile Include="agoraconfig.cpp" />
     <ClCompile Include="CAgoraObject.cpp" />
+    <ClCompile Include="CBigWidget.cpp" />
+    <ClCompile Include="CBottomBar.cpp" />
+    <ClCompile Include="CFrameLessWidgetBase.cpp" />
+    <ClCompile Include="CLeftVideoList.cpp" />
     <ClCompile Include="CLoginDlg.cpp" />
+    <ClCompile Include="CMainWidget.cpp" />
+    <ClCompile Include="CTitleBar.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agoraconfig.h" />
+    <QtMoc Include="CBigWidget.h" />
+    <QtMoc Include="CBottomBar.h" />
+    <ClInclude Include="CFrameLessWidgetBase.h" />
+    <QtMoc Include="CLeftVideoList.h" />
+    <QtMoc Include="CTitleBar.h" />
+    <QtMoc Include="CMainWidget.h" />
     <QtMoc Include="CAgoraObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
