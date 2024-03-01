@@ -103,7 +103,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <QtRcc Include="CLoginDlg.qrc" />
+    <QtRcc Include="videoConferencing.qrc" />
     <QtUic Include="CLoginDlg.ui" />
     <QtMoc Include="CLoginDlg.h" />
     <ClCompile Include="agoraconfig.cpp" />
