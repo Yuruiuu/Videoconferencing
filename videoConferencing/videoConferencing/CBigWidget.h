@@ -6,6 +6,8 @@ class CBigVideoWidget:public QWidget
 public:
 	CBigVideoWidget(QWidget* p = nullptr);
 	~CBigVideoWidget();
+
+	HWND getHwnd() const;
 private:
 };
 

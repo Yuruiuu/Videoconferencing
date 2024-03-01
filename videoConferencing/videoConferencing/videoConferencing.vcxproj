@@ -114,11 +114,14 @@
     <ClCompile Include="CLeftVideoList.cpp" />
     <ClCompile Include="CLoginDlg.cpp" />
     <ClCompile Include="CMainWidget.cpp" />
+    <ClCompile Include="CSmallVideoWidget.cpp" />
     <ClCompile Include="CTitleBar.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agoraconfig.h" />
+    <ClInclude Include="commons.h" />
+    <QtMoc Include="CSmallVideoWidget.h" />
     <QtMoc Include="CBigWidget.h" />
     <QtMoc Include="CBottomBar.h" />
     <ClInclude Include="CFrameLessWidgetBase.h" />

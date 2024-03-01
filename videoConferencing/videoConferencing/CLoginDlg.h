@@ -9,6 +9,9 @@ class CLoginDlg : public QDialog
 
 public:
     CLoginDlg(QWidget *parent = Q_NULLPTR);
+    ~CLoginDlg();
+
+    QString getRoomId() const;
 
 private slots:
 	void on_btnJoin_clicked();

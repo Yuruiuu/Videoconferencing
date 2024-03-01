@@ -64,12 +64,18 @@
     <ClCompile Include="CBottomBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CSmallVideoWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agoraconfig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CFrameLessWidgetBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -90,6 +96,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="CLeftVideoList.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CSmallVideoWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
