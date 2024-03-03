@@ -67,6 +67,12 @@
     <ClCompile Include="CSmallVideoWidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CCustomToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareScreenDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agoraconfig.h">
@@ -99,6 +105,12 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="CSmallVideoWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="CCustomToolButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ShareScreenDialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

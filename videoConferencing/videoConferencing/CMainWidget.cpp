@@ -3,6 +3,9 @@
 #include <QHBoxLayout>
 #include <QMessageBox>
 #include "CSmallVideoWidget.h"
+#include <QGuiApplication>
+#include <QScreen>
+#include "ShareScreenDialog.h"
 
 CMainWidget::CMainWidget(QWidget* p)
 	:CFrameLessWidgetBase(p)
@@ -26,6 +29,11 @@ CMainWidget::CMainWidget(QWidget* p)
 
 CMainWidget::~CMainWidget()
 {
+	if (m_pAgora)
+	{
+		delete m_pAgora;
+		m_pAgora = nullptr;
+	}
 }
 
 void CMainWidget::joinRoom(const QString& roomId)
@@ -47,12 +55,34 @@ void CMainWidget::initUI()
 	QHBoxLayout* pHLay = new QHBoxLayout(this);
 
 	pHLay->addWidget(m_pCLeftVideoList);
-	pHLay->addWidget(m_pCBigVideoWidget);
 
+	QVBoxLayout* pVLay = new QVBoxLayout(this);
+	pVLay->addWidget(m_pCBigVideoWidget);
+	pVLay->addWidget(m_pCBottomBar);
+
+	pHLay->addLayout(pVLay);
 	mainVLay->addLayout(pHLay);
-	mainVLay->addWidget(m_pCBottomBar);
 
 	mainVLay->setContentsMargins(0, 0, 0, 0);
+
+	connect(m_pTitleBar, &CTitleBar::sig_close, this, &CMainWidget::onClose);
+	connect(m_pCBottomBar, &CBottomBar::sig_shareScreen, this, &CMainWidget::onShareScreen);
+	connect(m_pCBottomBar, &CBottomBar::sig_endMeeting, this, &CMainWidget::onEndMeeting);
+}
+
+void CMainWidget::resizeEvent(QResizeEvent* event)
+{
+	int w = this->width();
+	int h = this->height();
+	
+	QScreen* screen = QGuiApplication::primaryScreen(); // 获取主屏幕
+	QRect geometry = screen->geometry(); // 获取屏幕的几何信息
+
+	int screenWidth = geometry.width(); // 获取屏幕宽度
+	int screenHeight = geometry.height(); // 获取屏幕高度
+
+	if (!this->isMaximized())
+		this->move((screenWidth - w) / 2, (screenHeight - h) / 2);
 }
 
 //本地加入成功
@@ -67,4 +97,35 @@ void CMainWidget::onRemoteJoined(uid_t uid, int elapsed)
 	CSmallVideoWidget* pSmall = new CSmallVideoWidget();
 	m_pCLeftVideoList->addVideoWidget(pSmall);
 	m_pAgora->RemoteVideoRender(uid, (HWND)(pSmall->winId()));
+}
+
+void CMainWidget::onClose()
+{
+	close();
+}
+
+void CMainWidget::onShareScreen()
+{
+	VecWindowShareInfo vecWindowShare;//保存需要共享的信息
+	m_pAgora->shareScreen(vecWindowShare);
+
+	ShareScreenDialog* share = new ShareScreenDialog(this);
+	share->initListWidget(vecWindowShare);
+
+	connect(share, &ShareScreenDialog::sig_StartShare, this, &CMainWidget::startShareScreen);
+
+	share->exec();
+}
+
+void CMainWidget::onEndMeeting()
+{
+	close();
+}
+
+void CMainWidget::startShareScreen(int type, void* hwnd)
+{
+	if (0 != m_pAgora->start_share_screen(type, hwnd))
+	{
+		QMessageBox::information(this, u8"提示", u8"共享屏幕失败");
+	}
 }

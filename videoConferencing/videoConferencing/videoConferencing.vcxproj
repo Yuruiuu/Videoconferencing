@@ -103,6 +103,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ShareScreenDialog.cpp" />
     <QtRcc Include="videoConferencing.qrc" />
     <QtUic Include="CLoginDlg.ui" />
     <QtMoc Include="CLoginDlg.h" />
@@ -110,6 +111,7 @@
     <ClCompile Include="CAgoraObject.cpp" />
     <ClCompile Include="CBigWidget.cpp" />
     <ClCompile Include="CBottomBar.cpp" />
+    <ClCompile Include="CCustomToolButton.cpp" />
     <ClCompile Include="CFrameLessWidgetBase.cpp" />
     <ClCompile Include="CLeftVideoList.cpp" />
     <ClCompile Include="CLoginDlg.cpp" />
@@ -120,6 +122,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agoraconfig.h" />
+    <QtMoc Include="ShareScreenDialog.h" />
+    <QtMoc Include="CCustomToolButton.h" />
     <ClInclude Include="commons.h" />
     <QtMoc Include="CSmallVideoWidget.h" />
     <QtMoc Include="CBigWidget.h" />

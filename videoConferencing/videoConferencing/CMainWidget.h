@@ -18,11 +18,16 @@ public:
 
 private:
 	void initUI();
+	void resizeEvent(QResizeEvent* event) override;
 
 private slots:
 	//void on_btnJoin_clicked();
 	void onLocalJoinedSuccess(const QString& qsChannel, unsigned int uid, int elapsed);
 	void onRemoteJoined(uid_t uid, int elapsed);
+	void onClose();
+	void onShareScreen();
+	void onEndMeeting();
+	void startShareScreen(int type, void* hwnd);
 
 private:
 	CTitleBar* m_pTitleBar = nullptr;
