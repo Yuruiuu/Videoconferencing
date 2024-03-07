@@ -2,6 +2,7 @@
 #include "agoraconfig.h"
 #include <QMessageBox>
 #include <QProcess>
+#include <QDebug>
 
 
 //Specify your APP ID here
@@ -82,6 +83,7 @@ int CAgoraObject::init()
     m_rtcEngine->enableVideo();
     m_rtcEngine->setChannelProfile(CHANNEL_PROFILE_COMMUNICATION);
 
+    qDebug() << "0" << endl;
 	return 0;
 }
 

@@ -9,7 +9,7 @@
         <file>resources/login/logo.png</file>
         <file>resources/login/min.svg</file>
         <file>resources/login/min_hover.svg</file>
-        <file alias="/mainwidget">resources/login/right_image.png</file>
+        <file>resources/login/right_image.png</file>
     </qresource>
     <qresource prefix="/mainwidget">
         <file>resources/mainwidget/titlebar/close.svg</file>
@@ -21,5 +21,33 @@
         <file>resources/mainwidget/titlebar/min_hover.svg</file>
         <file>resources/mainwidget/titlebar/normal.svg</file>
         <file>resources/mainwidget/titlebar/normal_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/anquan.svg</file>
+        <file>resources/mainwidget/bottomBar/anquan_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/application.svg</file>
+        <file>resources/mainwidget/bottomBar/application_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/camera_close.svg</file>
+        <file>resources/mainwidget/bottomBar/camera_close_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/camera_open.svg</file>
+        <file>resources/mainwidget/bottomBar/camera_open_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/chat.svg</file>
+        <file>resources/mainwidget/bottomBar/chat_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/ctrlwidget_set.svg</file>
+        <file>resources/mainwidget/bottomBar/ctrlwidget_set_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/fullScreen.svg</file>
+        <file>resources/mainwidget/bottomBar/fullScreen_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/group.svg</file>
+        <file>resources/mainwidget/bottomBar/group_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/manage_member.svg</file>
+        <file>resources/mainwidget/bottomBar/manage_member_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/microfeng_close.svg</file>
+        <file>resources/mainwidget/bottomBar/microfeng_close_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/microfeng_open.svg</file>
+        <file>resources/mainwidget/bottomBar/microfeng_open_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/rec.svg</file>
+        <file>resources/mainwidget/bottomBar/rec_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/screen_share.svg</file>
+        <file>resources/mainwidget/bottomBar/screen_share_hover.svg</file>
+        <file>resources/mainwidget/bottomBar/yaoqing.svg</file>
+        <file>resources/mainwidget/bottomBar/yaoqing_hover.svg</file>
     </qresource>
 </RCC>
